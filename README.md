@@ -1,10 +1,8 @@
 # Social-Networking-Application
 Guideline
-This project is made of three steps; each has different deadlines specified below; Project Step 1 Deadline: November 11, 2019, Monday, 22:00
-Project Step 1 Demo: to be announced
-Project Step 2 Deadline: November 29, 2019, Friday, 22:00 Project Step 2 Demo: to be announced
-Project Step 3 Deadline: December 13, 2019, Friday, 22:00 Project Step 3 Demo: December 26, 2019, Friday
-Introduction
+This project is made of three steps; each has different deadlines specified below; 
+
+## Introduction
 In this project, you are going to develop a social networking application implementing client and server modules. (i) The Server module manages message transfers, notifications and friendship relationships among the users, and (ii) the Client module behaves as a user which adds/removes friends, accepts/rejects friendship requests, sends/receives messages and receives relevant notifications.
 
 The server listens on a predefined port and accepts incoming client connections. There might be one or more clients connected to the server at the same time. Each client knows the IP address and the listening port of the server (to be entered through the Graphical User Interface (GUI)). Clients connect to the server on a corresponding port and identify themselves with their names. Server needs to keep the names of currently connected clients in order to avoid the same name to be connected more than once at a given time to the server.
@@ -13,7 +11,7 @@ On the server side, there is a predefined database of users which are presumed t
 
 The abovementioned introduction is for the entire project, which is to be completed in three steps. Each step is built on the previous step and each has specific deadlines and demos.
 
-Project Step 1 (Deadline: November 11, 2019, Monday, 22:00):
+### Project Step 1:
 After the server starts listening, clients start to connect to the server. A connected client can broadcast textual messages to all other connected clients via the server. In other words, server behaves like a bridge among all clients. When a particular user sends a message, server forwards that message to other users, except the sender. Therefore, server needs to keep connected clients’ list up-to-date.
 
 Users perform all of the operations through a GUI; such as connecting to the server, entering their name, sending message, etc. Additionally, all received messages with the sender’s name must be shown on the client GUI.
@@ -22,7 +20,7 @@ This step is the basis of the project. Although the project has some friendship 
 
 For programming rules and submission specifications, please read the corresponding sections at the end of this document.
 
-Server Specifications:
+#### Server Specifications:
 There is only one server running on this system.
 The port number on which the server listens is not to be hardcoded; it should be taken from the Server GUI.
 The server will start listening on the specified port. It has to handle multiple clients simultaneously. To do so, whenever a client is connected to the listening port, the corresponding socket should be added to a list and the server should continuously accept other client sockets while listening.
@@ -42,8 +40,10 @@ Each client can send and receive textual messages at any time. If a client sends
 Each client can disconnect from the system at any time. Disconnection can be done by pressing a disconnect button on client GUI or by just closing the client window.
 If the client application is closed (even abruptly), nothing should crash! Also, the process in the operating system regarding the client should be terminated properly.
 Both connection and message transfer operations will be performed using TCP sockets.
+
 ------------------ End of Step 1 ----------------------
-Project Step 2 (Deadline: November 29, 2019, Friday, 22:00):
+
+### Project Step 2:
 Second step of the project is built on top of the first step. In this step, you will modify previous client and server modules to add more functionalities.
 
 In this step, in addition to the message transfer feature of step 1, adding friends and notification features are to be added to the application.
@@ -64,7 +64,8 @@ As in the step 1, all of the operations must be clearly shown on the client and 
 For programming rules and submission specifications, please read the corresponding sections at the end of this document.
 
 ------------------ end of Step 2 ----------------------
-Project Step 3 (Deadline: December 13, 2019, Friday, 22:00):
+
+### Project Step 3:
 Third step of the project is built on top of the first and second steps. In this step of the project, remaining friendship relations are to be implemented in the application, which are (i) Removal of an existing friend and (ii) sending message to the existing friends.
 
 A client can remove his/her friend without asking for any consent from him/her. However, removed friend should be notified. Again, the server is in the loop and same online/offline cases apply.
