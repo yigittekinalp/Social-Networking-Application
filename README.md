@@ -74,6 +74,4 @@ A client should also be able to send messages to all of his/her current friends 
 
 As in the step 1 and 2, all of the operations must be clearly shown on the client and server GUIs.
 
-For programming rules and submission specifications, please read the corresponding sections at the end of this document.
-
 
