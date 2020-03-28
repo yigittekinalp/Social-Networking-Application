@@ -21,25 +21,28 @@ This step is the basis of the project. Although the project has some friendship 
 For programming rules and submission specifications, please read the corresponding sections at the end of this document.
 
 #### Server Specifications:
-There is only one server running on this system.
-The port number on which the server listens is not to be hardcoded; it should be taken from the Server GUI.
-The server will start listening on the specified port. It has to handle multiple clients simultaneously. To do so, whenever a client is connected to the listening port, the corresponding socket should be added to a list and the server should continuously accept other client sockets while listening.
-Only users which reside in the user database can connect to the server as a client. In other words, no user with a name that does not exist in the user database can connect.
-The server forwards the incoming messages to all clients other than the sender, but the server should include the name of the sender to the forwarded messages.
-All activities of the server should be reported using a rich text box on the Server GUI including the names of connected clients as well as all the message transfer details. We cannot grade your project if we cannot follow what is going on; so the details contained in this text box is very important.
-Server must handle multiple connections. At the same time, one or more clients can send and receive messages to/from the server.
+
+-There is only one server running on this system.
+-The port number on which the server listens is not to be hardcoded; it should be taken from the Server GUI.
+-The server will start listening on the specified port. It has to handle multiple clients simultaneously. To do so, whenever a client is connected to the listening port, the corresponding socket should be added to a list and the server should continuously accept other client sockets while listening.
+-Only users which reside in the user database can connect to the server as a client. In other words, no user with a name that does not exist in the user database can connect.
+-The server forwards the incoming messages to all clients other than the sender, but the server should include the name of the sender to the forwarded messages.
+-All activities of the server should be reported using a rich text box on the Server GUI including the names of connected clients as well as all the message transfer details. We cannot grade your project if we cannot follow what is going on; so the details contained in this text box is very important.
+-Server must handle multiple connections. At the same time, one or more clients can send and receive messages to/from the server.
 Connected clients’ names must be unique; therefore, the server must keep track of connected clients’ names. If a new client comes with an existing name, server must not accept this new client.
-When the server application is closed (even abruptly), nothing should crash! Also, the process in the operating system regarding the server should be terminated properly.
-Client specifications:
-The server’s IP address and the port number must not be hardcoded and must be entered via the client GUI.
-There could be any number of clients in the system.
-If the server or the client application closes, the other party should understand disconnection and act accordingly. Your program must not crash!
-All activities of the client should be reported using a rich text box on the client GUI including sent and received message information. We cannot grade your project if we cannot follow what is going on, so the details contained in this text box is very important.
-Each client must have a unique name. This name must be entered using the client GUI. This name is also sent to the server. The server identifies the clients using their names.
-Each client can send and receive textual messages at any time. If a client sends a message, this message is forwarded to all other online (connected) clients by the server.
-Each client can disconnect from the system at any time. Disconnection can be done by pressing a disconnect button on client GUI or by just closing the client window.
-If the client application is closed (even abruptly), nothing should crash! Also, the process in the operating system regarding the client should be terminated properly.
-Both connection and message transfer operations will be performed using TCP sockets.
+-When the server application is closed (even abruptly), nothing should crash! Also, the process in the operating system regarding the server should be terminated properly.
+
+#### Client specifications:
+
+-The server’s IP address and the port number must not be hardcoded and must be entered via the client GUI.
+-There could be any number of clients in the system.
+-If the server or the client application closes, the other party should understand disconnection and act accordingly. Your program must not crash!
+-All activities of the client should be reported using a rich text box on the client GUI including sent and received message information. We cannot grade your project if we cannot follow what is going on, so the details contained in this text box is very important.
+-Each client must have a unique name. This name must be entered using the client GUI. This name is also sent to the server. The server identifies the clients using their names.
+-Each client can send and receive textual messages at any time. If a client sends a message, this message is forwarded to all other online (connected) clients by the server.
+-Each client can disconnect from the system at any time. Disconnection can be done by pressing a disconnect button on client GUI or by just closing the client window.
+-If the client application is closed (even abruptly), nothing should crash! Also, the process in the operating system regarding the client should be terminated properly.
+-Both connection and message transfer operations will be performed using TCP sockets.
 
 ------------------ End of Step 1 ----------------------
 
